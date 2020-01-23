@@ -30,7 +30,7 @@ const db = knex({
 
 
 
-
+app.get('/', (req,res)=>{res.send('it is working')})
 app.post('/signin', signin.handleSignin(db, bcrypt) );
 
 app.get('/profile/:id', (req, res)=> {profile.handleProfile(req, res, db)} )
